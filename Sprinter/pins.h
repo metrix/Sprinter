@@ -595,6 +595,68 @@
 #endif
 
 /****************************************************************************************
+* Brainwave 1.0 pin assingments (ATMEGA90USB646)
+* Requires the Brainwave hardware bundle for Arduino
+****************************************************************************************/
+#if MOTHERBOARD == 81
+#define MOTHERBOARD 81
+#define KNOWN_BOARD 1
+
+#ifndef __AVR_AT90USB646__
+#error Oops!  Make sure you have 'Brainwave' selected from the 'Tools -> Boards' menu.
+#endif
+
+#define X_STEP_PIN         27
+#define X_DIR_PIN          29
+#define X_ENABLE_PIN       28
+#define X_MIN_PIN           7
+#define X_MAX_PIN          -1
+#define X_ATT_PIN          26
+
+#define Y_STEP_PIN         31
+#define Y_DIR_PIN          33
+#define Y_ENABLE_PIN       32
+#define Y_MIN_PIN           6
+#define Y_MAX_PIN          -1
+#define Y_ATT_PIN          30
+
+#define Z_STEP_PIN         17
+#define Z_DIR_PIN          19
+#define Z_ENABLE_PIN       18
+#define Z_MIN_PIN           5
+#define Z_MAX_PIN          -1
+#define Z_ATT_PIN          16
+
+#define E_STEP_PIN         21
+#define E_DIR_PIN          23
+#define E_ENABLE_PIN       22
+#define E_ATT_PIN          20
+
+#define HEATER_0_PIN        4  // Extruder
+#define HEATER_1_PIN       38  // Bed
+#define FAN_PIN             3  // Fan
+
+#define TEMP_0_PIN          7  // Extruder / Analog pin numbering
+#define TEMP_1_PIN          6  // Bed / Analog pin numbering
+
+#define SDPOWER            -1
+#define SDSS               -1
+#define LED_PIN            39
+#define PS_ON_PIN          -1
+#define KILL_PIN           -1
+#define ALARM_PIN          -1
+
+#ifndef SDSUPPORT
+// these pins are defined in the SD library if building with SD support
+  #define SCK_PIN          21
+  #define MISO_PIN         22
+  #define MOSI_PIN         23
+#endif
+
+#endif
+
+
+/****************************************************************************************
 * Gen6 pin assignment
 *
 ****************************************************************************************/
